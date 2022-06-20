@@ -23,9 +23,36 @@ test('recieve name and age return object', () => {
   })
 })
 
-test('recieve name and age return object', () => {
-  expect(fn.makeUser('Brian', 30)).toStrictEqual({
-    name: 'Brian',
-    age: 30,
-  })
+// test('recieve name and age return object', () => {
+//   expect(fn.makeUser('Brian', 30)).toStrictEqual({
+//     name: 'Brian',
+//     age: 30,
+//   })
+// })
+
+//toBenNull
+//toBeUndefined
+// toBeDefined
+
+test('null은 null 입니다.', () => {
+  expect(null).toBeNull();
+})
+
+//toBeTruthy
+// toBeFalsy
+test('0은 false 입니다.', () => {
+  expect(fn.add(1, -1)).toBeFalsy(); 
+});
+
+test('비어있지 않는 문자열은 true 입니다.', () => {
+  expect(fn.add('hello', 'world')).toBeTruthy(); 
+});
+
+//toBeGreaterThan
+// toBeGreaterThanOrEqual
+// toBeLessThan
+// toBeLessThanOrEqual 
+test('ID는 10자 이하여야 합니다.', () => {
+  const id = 'spiderman';
+  expect(id.length).toBeLessThanOrEqual(10)
 })
